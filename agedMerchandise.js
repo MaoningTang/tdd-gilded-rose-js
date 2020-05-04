@@ -11,8 +11,4 @@ export class AgedMerchandise extends Merchandise {
     updateQualityAndSellInByOneDay() {
         this.quality += this.growthRate;
     }
-
-    toString() {
-        return `Name: ${this.name}, SellIn: ${this.sellIn}, Quality: ${this.quality}`
-    }
 }
