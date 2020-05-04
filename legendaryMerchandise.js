@@ -9,4 +9,8 @@ export class LegendaryMerchandise extends Merchandise {
     toString() {
         return `Name: ${this.name}, SellIn: NA, Quality: ${this.quality}`
     }
+
+    updateQualityAndSellInByOneDay() {
+        return;
+    }
 }
