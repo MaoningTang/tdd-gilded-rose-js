@@ -1,5 +1,5 @@
 import {AgedMerchandise} from "./agedMerchandise";
-import {Pass} from "./Pass";
+import {Pass} from "./pass";
 
 describe("PassTest", () => {
     test("it should return legendary merchandise string", () => {
