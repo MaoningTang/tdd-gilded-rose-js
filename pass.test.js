@@ -21,4 +21,11 @@ describe("PassTest", () => {
         expect(pass.sellIn).toEqual(9);
         expect(pass.quality).toEqual(3);
     });
+
+    test("it should reduce its sellIn by one and increase its quality by three when sellIn smaller then 5 and grater then 0", () => {
+        const pass = new Pass('Backstage pass', 5,1,1);
+        pass.updateQualityAndSellInByOneDay();
+        expect(pass.sellIn).toEqual(4);
+        expect(pass.quality).toEqual(4);
+    });
 });

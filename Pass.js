@@ -15,6 +15,9 @@ export class Pass extends Merchandise {
         if(this.sellIn <= 10 && this.sellIn > 5){
             this.quality += 2*this.#growthRate;
         }
+        if(this.sellIn <= 5 && this.sellIn > 0){
+            this.quality += 3*this.#growthRate;
+        }
         this.sellIn--;
     }
 }
