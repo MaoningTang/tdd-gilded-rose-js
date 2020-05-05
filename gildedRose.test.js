@@ -31,4 +31,20 @@ describe("GildedRoseTest", () => {
         gildedRose.updateQuality();
         expect(gildedRose.day).toEqual(1);
     });
+
+    test("it should return GildedRose string", () => {
+        const merchandises = [
+            new Merchandise('Ordinary1', 1, 1, 1),
+            new LegendaryMerchandise('Sulfuras', 2),
+            new AgedMerchandise('Aged Brie', 1, 1),
+            new Pass('Backstage pass', 11,1,1)
+        ];
+        const gildedRose = new GildedRose(merchandises);
+        expect(gildedRose.toString()).toEqual("Day: 0\n" +
+            "----Merchandises----\n" +
+            "Name: Ordinary1, SellIn: 1, Quality: 1\n" +
+            "Name: Sulfuras, SellIn: NA, Quality: 2\n" +
+            "Name: Aged Brie, SellIn: Infinity, Quality: 1\n" +
+            "Name: Backstage pass, SellIn: 11, Quality: 1");
+    });
 });

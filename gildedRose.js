@@ -18,4 +18,14 @@ export class GildedRose {
         }
         this._day++;
     }
+
+    toString() {
+        const merchandisesString = [];
+        merchandisesString.push(`Day: ${this._day}`)
+        merchandisesString.push(`----Merchandises----`)
+        for (let i = 0; i < this.merchandises.length; i++) {
+            merchandisesString.push(this.merchandises[i].toString());
+        }
+        return merchandisesString.join('\n');
+    }
 }
