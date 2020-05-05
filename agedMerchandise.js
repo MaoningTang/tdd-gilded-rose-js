@@ -1,14 +1,14 @@
 import {Merchandise} from "./merchandise";
 
 export class AgedMerchandise extends Merchandise {
-    growthRate
+    #growthRate
 
     constructor(name, quality, growthRate) {
         super(name, Infinity, quality, 0);
-        this.growthRate = growthRate;
+        this.#growthRate = growthRate;
     }
 
     updateQualityAndSellInByOneDay() {
-        this.quality += this.growthRate;
+        this.quality += this.#growthRate;
     }
 }

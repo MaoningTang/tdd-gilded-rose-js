@@ -16,4 +16,14 @@ describe("AgedMerchandiseTest", () => {
         expect(agedMerchandise.sellIn).toEqual(Infinity);
         expect(agedMerchandise.quality).toEqual(2);
     });
+
+    test("it should update its quality to value not grater than 50", () => {
+        const agedMerchandise = new AgedMerchandise('Aged Brie', 49,10);
+        expect(agedMerchandise.name).toEqual('Aged Brie');
+        expect(agedMerchandise.sellIn).toEqual(Infinity);
+        expect(agedMerchandise.quality).toEqual(49);
+        agedMerchandise.updateQualityAndSellInByOneDay();
+        expect(agedMerchandise.sellIn).toEqual(Infinity);
+        expect(agedMerchandise.quality).toEqual(50);
+    });
 });

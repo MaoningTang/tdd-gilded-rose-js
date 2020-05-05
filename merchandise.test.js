@@ -26,4 +26,14 @@ describe("MerchandiseTest", () => {
         expect(merchandise.sellIn).toEqual(-1);
         expect(merchandise.quality).toEqual(1);
     });
+
+    test("it should update its quality to value not smaller than 0", () => {
+        const merchandise = new Merchandise('ordinary', 0, 1, 2);
+        expect(merchandise.name).toEqual('ordinary');
+        expect(merchandise.sellIn).toEqual(0);
+        expect(merchandise.quality).toEqual(1);
+        merchandise.updateQualityAndSellInByOneDay();
+        expect(merchandise.sellIn).toEqual(-1);
+        expect(merchandise.quality).toEqual(0);
+    });
 });
