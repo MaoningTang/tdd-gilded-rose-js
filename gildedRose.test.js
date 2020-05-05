@@ -23,4 +23,12 @@ describe("GildedRoseTest", () => {
         gildedRose.updateQuality();
         expect(gildedRose.merchandises).toEqual(merchandisesResult);
     });
+
+    test("it should update day", () => {
+        const merchandises = [];
+        const gildedRose = new GildedRose(merchandises);
+        expect(gildedRose.day).toEqual(0);
+        gildedRose.updateQuality();
+        expect(gildedRose.day).toEqual(1);
+    });
 });
