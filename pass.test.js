@@ -28,4 +28,11 @@ describe("PassTest", () => {
         expect(pass.sellIn).toEqual(4);
         expect(pass.quality).toEqual(4);
     });
+
+    test("it should set quality to 0 when pass expired", () => {
+        const pass = new Pass('Backstage pass', 0,1,1);
+        pass.updateQualityAndSellInByOneDay();
+        expect(pass.sellIn).toEqual(-1);
+        expect(pass.quality).toEqual(0);
+    });
 });
