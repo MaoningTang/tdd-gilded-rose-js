@@ -1,4 +1,4 @@
-import {GildedRose, gildedRose} from './gildedRose'
+import {GildedRose} from './gildedRose'
 import {Merchandise} from "./merchandise";
 import {AgedMerchandise} from "./agedMerchandise";
 import {LegendaryMerchandise} from "./legendaryMerchandise";
